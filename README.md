@@ -2,11 +2,16 @@
 
 A nodemcu and DS18B20 based temperature measure device indented for usage in a sauna.
 
+There is also a [blog post](http://raspelikan.blogspot.co.at/2017/08/sauna-temperature-measure-device.html) showing some pictures.
+
+Hint: The software reads the temperature every 10 seconds. If you load the site within the first 10 seconds, the result is an empty page. After the first 10 seconds you can click/press the shown temperature to reload the site.
+
 # installation
 
 1. flash your ESP module
 2. put ds18b20.lua to the ESP module
 3. put init.lua to the ESP module
+4. register a name for your ESP module
 
 # flash your ESP module
 
@@ -38,3 +43,7 @@ First you have to open the file in ESPlorer. Now adopt the lines
 according your WiFi settings.
 
 Then press the button "Save to ESP". After uploading the file the ESP module will reboot and connect to your WiFi. The device is now ready to use.
+
+# register a name for your ESP module
+
+I configured my WiFi router to assign a static address to the ESP module. Additionally I entered a name in the router config. So I'm able to load the page using the URL http://sauna.local.
